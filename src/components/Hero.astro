@@ -1,0 +1,29 @@
+---
+interface Props {
+  name: string;
+  title: string;
+}
+const { name, title } = Astro.props;
+---
+
+<section class="min-h-[60vh] flex flex-col justify-center px-6 py-20">
+  <div class="max-w-2xl mx-auto w-full">
+    <h1 class="text-3xl sm:text-4xl font-semibold text-text">{name}</h1>
+    <p class="text-text-dim mt-2 text-lg">{title}</p>
+
+    <div class="flex flex-wrap gap-3 mt-8">
+      <a
+        href="/about"
+        class="rounded-lg bg-accent px-5 py-3 text-sm font-medium text-bg hover:bg-accent-dim transition-colors"
+      >
+        About Me
+      </a>
+      <a
+        href="/contact"
+        class="rounded-lg border border-border bg-surface px-5 py-3 text-sm font-medium text-text hover:border-accent hover:text-accent transition-colors"
+      >
+        Contact Me
+      </a>
+    </div>
+  </div>
+</section>

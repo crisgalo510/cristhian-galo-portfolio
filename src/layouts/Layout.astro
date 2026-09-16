@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+import Sidebar from '../components/Sidebar.astro';
+import Dock from '../components/Dock.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Cristhian Galo · Portfolio',
+  description = 'Software engineering student and IT support specialist. Projects, experience, and homelab work.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen bg-bg">
+    <Sidebar />
+    <div class="pr-16 sm:pl-56 sm:pr-20 flex flex-col min-h-screen">
+      <main class="flex-1">
+        <slot />
+      </main>
+      <footer class="px-6 py-10 text-center text-xs text-text-dim font-mono">
+        built with astro
+      </footer>
+    </div>
+    <Dock />
+  </body>
+</html>

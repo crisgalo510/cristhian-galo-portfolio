@@ -1,0 +1,18 @@
+---
+# HOW TO ADD A NEW PROJECT:
+# 1. Copy this file, rename it to something like "my-project.md"
+# 2. Fill in the fields below and delete this comment block
+# 3. Write your project description below the frontmatter
+# 4. Save, commit, push — your site rebuilds automatically
+title: "Project Name"
+description: "One or two sentence summary shown on the project card."
+stack: ["Tech", "Tech", "Tech"]
+featured: false
+date: 2026-01-01
+repo: "https://github.com/you/repo"
+demo: "https://your-demo-link.com"
+# githubRepo: "you/repo"   # uncomment to show live star/commit count on the card
+---
+Write a short paragraph here about what the project does, why you built it,
+and anything interesting about how it works. This is the expanded description
+shown when someone clicks into the project.
